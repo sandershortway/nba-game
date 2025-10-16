@@ -5,3 +5,10 @@ description = "NBA East & West conference ranking game"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = []
+
+[tool.ruff.lint]
+select = ["D"]
+ignore = ["D417"]
+
+[tool.ruff.lint.pydocstyle]
+convention = "google"
