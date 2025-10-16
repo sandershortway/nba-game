@@ -1,9 +1,22 @@
+"""NBA team identifiers.
+
+Provides an immutable dataclass `Team` exposing NBA teams as class attributes
+mapping standard abbreviations (e.g., `OKC`) to full team names (e.g.,
+"Oklahoma City Thunder").
+"""
+
 from dataclasses import dataclass
 
 
 @dataclass(frozen=True)
 class Team:
-    # TODO docstring
+    """Immutable mapping of NBA team abbreviations to full names.
+
+    This dataclass exposes each NBA team as a class attribute where the
+    attribute name is the team's standard abbreviation (e.g., `Team.OKC`),
+    and the value is the full team name (e.g., "Oklahoma City Thunder").
+    """
+
     ATL: str = "Atlanta Hawks"
     BOS: str = "Boston Celtics"
     BKN: str = "Brooklyn Nets"
